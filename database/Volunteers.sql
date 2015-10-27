@@ -7,11 +7,21 @@ create table volunteer (
 	First_Name varchar(255) not null,
 	Last_Name varchar(255) not null,
 	Email varchar(50) not null,
-	eventID int not null
 	
 );
 
-insert into volunteerID (First_Name, Last_Name, Email, eventID) value ("Melissa", "Rafalski", "melissarafalski@gmail.com", "BoxTops");
+insert into volunteer (First_Name, Last_Name, Email) value ("Melissa", "Rafalski", "melissarafalski@gmail.com");
+insert into volunteer (First_Name, Last_Name, Email) value ("Stephanie", "Viviano", "stephanieviviano1@gmail.com") ;
+insert into volunteer (First_Name, Last_Name, Email) value ("Scott", "Brenner", "scottcbrenner@gmail.com");
+insert into volunteer (First_Name, Last_Name, Email) value ("Melissa", "Campo", "teamcampo@gmail.com");
+insert into volunteer (First_Name, Last_Name, Email) value ("Bryce", "Campo", "azdadx2@gmail.com");
+insert into volunteer (First_Name, Last_Name, Email) value ("Jessica", "Donnerstein","jdonnerstein@gmail.com");
+insert into volunteer (First_Name, Last_Name, Email) value ("Michael", "Donnerstein", "mdonnerstein@gmail.com");
+insert into volunteer (First_Name, Last_Name, Email) value ("Nicole", "Delgado", "brigab827@yahoo.com");
+insert into volunteer (First_Name, Last_Name, Email) value ("Renne", "Garcia", "rgarciathatsme@gmail.com");
+insert into volunteer (First_Name, Last_Name, Email) value ("Eduard", "Goodman", "dreamersq@hotmail.com");
+insert into volunteer (First_Name, Last_Name, Email) value ("April", "Goodman", "missapril11@cox.net");
+	
 
 	-- Stephanie	Viviano	stephanieviviano1@gmail.com
 	-- Scott	Brenner	scottcbrenner@gmail.com
