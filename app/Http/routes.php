@@ -11,27 +11,25 @@
 |
 */
 
-Route::get('index', function () {
-    return view('welcome', ["date('d,M,Y)"]);
+Route::get('welcome', function () {
+    return view('/Layouts/welcome', ["date('d,M,Y)"]);
 });
 
-Route::get('layout', function() {
-	return view('layout');
-})
-
-Route::get('/home', function () {
+Route::get('home', function() {
 	return view('home');
 });
 
+// Route::get('/home', 'HomeController@index');
 
-Route::any('signup', function () {
-	return View::make('signup');
+
+Route::get('signup', function () {
+	return view('signup');
 });
 
-Route::post('thanks', function() {
+// Route::post('thanks', function() {
 
-	$theEmail = Input::get('email');
-	return View::make('thanks')->with('theEmail', $theEmail);
-});
+// 	$theEmail = Input::get('email');
+// 	return View::make('thanks')->with('theEmail', $theEmail);
+// });
 
 // these are authorizations routes for the login, logout and register//

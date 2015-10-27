@@ -10,6 +10,13 @@ use App\Http\Controllers\Controller;
 class HomeController extends Controller
 {
     public function index() {
-    	return view('welcome');
+    	return view('home');
     }
+}
+
+class VolunteerController extends Controller 
+{
+	public function create() {
+		return view('signup')
+	}
 }

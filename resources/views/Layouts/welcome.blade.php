@@ -30,11 +30,6 @@
                 display: inline-block;
             }
 
-            a {
-                background-image: cover;
-                background-size: 100%;
-                background-repeat: no-repeat;
-            }
             .title {
                 font-size: 150px;
             }
@@ -47,7 +42,6 @@
     <body>
         <div class="container">
             <div class="content">
-                <a href="pueblo.blade.php"><img src="pueblo.dusty.jpg"></a>
                 <div class="title">Welcome to Pueblo PTO</div>
                 <p>Today is {{ date('M d, Y') }}</p>
 
