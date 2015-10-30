@@ -2,27 +2,36 @@ drop database if exists Volunteers;
 create database Volunteers;
 use Volunteers;
 
-create table volunteer (
-	volunteerID int primary key,
-	First_Name varchar(255) not null,
-	Last_Name varchar(255) not null,
-	Email varchar(50) not null,
+create table volunteers (
+	volunteerID int auto_increment primary key,
+	firstName varchar(255) not null,
+	lastName varchar(255) not null,
+	email varchar(50) not null
 	
 );
 
-insert into volunteer (First_Name, Last_Name, Email) value ("Melissa", "Rafalski", "melissarafalski@gmail.com");
-insert into volunteer (First_Name, Last_Name, Email) value ("Stephanie", "Viviano", "stephanieviviano1@gmail.com") ;
-insert into volunteer (First_Name, Last_Name, Email) value ("Scott", "Brenner", "scottcbrenner@gmail.com");
-insert into volunteer (First_Name, Last_Name, Email) value ("Melissa", "Campo", "teamcampo@gmail.com");
-insert into volunteer (First_Name, Last_Name, Email) value ("Bryce", "Campo", "azdadx2@gmail.com");
-insert into volunteer (First_Name, Last_Name, Email) value ("Jessica", "Donnerstein","jdonnerstein@gmail.com");
-insert into volunteer (First_Name, Last_Name, Email) value ("Michael", "Donnerstein", "mdonnerstein@gmail.com");
-insert into volunteer (First_Name, Last_Name, Email) value ("Nicole", "Delgado", "brigab827@yahoo.com");
-insert into volunteer (First_Name, Last_Name, Email) value ("Renne", "Garcia", "rgarciathatsme@gmail.com");
-insert into volunteer (First_Name, Last_Name, Email) value ("Eduard", "Goodman", "dreamersq@hotmail.com");
-insert into volunteer (First_Name, Last_Name, Email) value ("April", "Goodman", "missapril11@cox.net");
+insert into volunteers (firstName, lastName, email) value ("Melissa", "Rafalski", "melissarafalski@gmail.com");
+insert into volunteers (firstName, lastName, email) value ("Stephanie", "Viviano", "stephanieviviano1@gmail.com") ;
+insert into volunteers (firstName, lastName, email) value ("Scott", "Brenner", "scottcbrenner@gmail.com");
+insert into volunteers (firstName, lastName, email) value ("Melissa", "Campo", "teamcampo@gmail.com");
+insert into volunteers (firstName, lastName, email) value ("Bryce", "Campo", "azdadx2@gmail.com");
+insert into volunteers (firstName, lastName, email) value ("Jessica", "Donnerstein","jdonnerstein@gmail.com");
+insert into volunteers (firstName, lastName, email) value ("Michael", "Donnerstein", "mdonnerstein@gmail.com");
+insert into volunteers (firstName, lastName, email) value ("Nicole", "Delgado", "brigab827@yahoo.com");
+insert into volunteers (firstName, lastName, email) value ("Renne", "Garcia", "rgarciathatsme@gmail.com");
+insert into volunteers (firstName, lastName, email) value ("Eduard", "Goodman", "dreamersq@hotmail.com");
+insert into volunteers (firstName, lastName, email) value ("April", "Goodman", "missapril11@cox.net");
 	
 
+create table events (
+	eventID int auto_increment primary key,
+	title varchar(255) not null,
+	eventStart date not null,
+	eventEnd date not null,
+	description text(255) not null
+);
+
+insert into events (title, eventStart, eventEnd, description) values (Pumpkin Patch, '2015-10-24 16:00:00', '2015-10-24 20:00:00', Enter for free. Buy tickets to: buy food, play games, use bounce houses, enter to win raffle baskets valued at $250 to $500!);
 	-- Stephanie	Viviano	stephanieviviano1@gmail.com
 	-- Scott	Brenner	scottcbrenner@gmail.com
 	-- Melissa	Campo	teamcampo@gmail.com

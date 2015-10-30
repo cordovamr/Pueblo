@@ -15,21 +15,30 @@ Route::get('welcome', function () {
     return view('/Layouts/welcome', ["date('d,M,Y)"]);
 });
 
-Route::get('home', function() {
-	return view('home');
+Route::get('calendar', function() {
+	return view('calendarMonth');
+});
+Route::get('home', 'VolunteerController@index');
+
+Route::get('signup', 'VolunteerController@signup');
+Route::get('volunteerList', 'VolunteerController@getVolunteers');
+Route::get('volunteerDetails', 'VolunteerController@getVolunteerDetails');
+
+
+Route::get('login', function() {
+	return view('login');
 });
 
-// Route::get('/home', 'HomeController@index');
-
-
-Route::get('signup', function () {
-	return view('signup');
-});
-
-// Route::post('thanks', function() {
-
-// 	$theEmail = Input::get('email');
-// 	return View::make('thanks')->with('theEmail', $theEmail);
+// Route::get('signup', function () {
+// 	return view('signup');
 // });
 
-// these are authorizations routes for the login, logout and register//
+// Route::get('/events', "CalendarController@getEvents");
+// Route::get('/events/{id}', "CalendarController@getEventDetails");
+// Route::get('/addEvent', "CalendarController@addEvent");
+// Route::post('/addEvent', "CalendarController@saveEvent");
+
+// Route::get('/editEvent/{id}', "CalendarController@EditEvent");
+// Route::post('/editEvent/{id}', "CalendarController@SaveEdit");
+// //API
+// Route::post('/api/deleteEvent/{id}', "CalendarController@removeEvent");

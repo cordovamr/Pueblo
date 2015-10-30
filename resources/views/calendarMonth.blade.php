@@ -1,21 +1,23 @@
-<<!DOCTYPE html>
-<html>
-<head>
-  <title>Practicing the event calendar page</title>
-</head>
-<body>
-<div class="calendar popup">
+@extends ('Layouts/layout')
+@section ('calendar')
+
+<div class="calendar">
+<p>Today is {{ date('M d, Y') }}</p>
+<h1>Upcoming Events</h1>
+
   <table>
     <thead>
       <tr>
-        <td class="title" colspan="7">March 2007</td>
+        <td class="calendar-title" colspan="7">October 2015</td>
       </tr>
       <tr>
-        <td class="button">«</td>
-        <td class="button">‹</td>
-        <td class="button" colspan="3">Today</td>
-        <td class="button">›</td>
-        <td class="button">»</td>
+        <!-- <td class="button">«</td>
+        <td class="button">‹</td> -->
+        <td class="button" colspan="3">
+        {{-- <p>Today is {{ date('M d, Y') }}</p> --}}
+        </td>
+        <!-- <td class="button">›</td>
+        <td class="button">»</td> I WANT TO DO AN ON.CLICK HERE TO SCROLL THROUGH THE MONTHS-->
       </tr>
       <tr>
         <th class="weekend">S</th>
@@ -62,7 +64,7 @@
         <td>21</td>
         <td>22</td>
         <td>23</td>
-        <td class="weekend">24</td>
+        <td class="weekend" id="pp"><b><a href="/events/{{$id => id }}">24</a></b></td>
       </tr>
       <tr class="days">
         <td class="weekend">25</td>
@@ -76,6 +78,5 @@
     </tbody>
   </table>
 </div>
+@stop
 
-</body>
-</html>

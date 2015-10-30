@@ -2,27 +2,59 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content-width="">
+	<meta name="viewport" content="device-width initial-scale=1">
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
-	<style type="text/css"></head>
 	<title>Template for my website pages- Pueblo</title>
+	<style type="text/css">
+		body {
+			background-image: url('books.jpg');
+			background-repeat: no-repeat;
+			background-size: 100%;
+			
+		}
+		.outer-container {
+			max-width: 960px;
+			margin: 0 auto;
+			box-shadow: 0 0 20px #000;
+		}
+		
+		.hero {
+			border-bottom: solid #663F93 2px;
+			padding-top: 20px;
+			background-color: #34BC00;
 
-		header {
-			background-color: #663F93;
+
+		}
+		.photos {
+			display: flex;
+			width: 100%;
+			background-color: #5EB32E;
+
+		}
+		#dusty {
+			flex: 1;
+			height: 250px;
+			padding: 5px;
+			
+		}
+		 #pto {
+			flex: 2;
+			padding: 5px;
 		}
 
 		nav {
-			background-color: #663F93
+			background-color: white;
+			padding: 10px;
+			border-bottom: solid #663F93 1px;
 		}
 		nav ul {
 			list-style: none;
 			margin: 0;
 			padding: 0;
-			background-color: #663F93;
 			display: flex;
-			justify-content: space-around;
+			/*justify-content: space-around;*/
 
 		}
 		nav li {
@@ -31,119 +63,134 @@
 		}
 		nav li a {
 			text-decoration: none;
+			color: #663F93;
+		}
+
+		
+		.mid-section {
+			display: flex;
+			
+			width: 100%;
+			
+		}
+		aside {
+			text-align: center;
+			content: center;
+		}
+		.calendar-title {
+			border-style: solid white 1px;
+			border-radius: 50%;
+			color: #34BC00;
+
+		}
+		.left-column{
+			background-color: #5C0DB4;
+			flex: 1;
+			opacity: .75;
+			
+		}
+		.middle-column {
+			background-color: #5C0DB4;
+			opacity: .75;
+			flex: 2;
+
+		}
+		.why {
+			color: #34BC00;
+		}
+		.aboutpto {
+			margin: 0px 5px 0px 5px;
+		}
+		.bottom-section {
+			background: linear-gradiend(#5C0DB4, #5EB32E);
+			opacity: .5;
+			text-align: center;
+
+		}
+		table {
+			padding-left: 85px;
+			border: 1px 0px 1px 0px;
+
+		}
+		#pp {
 			color: white;
 		}
 
-		form {
-			position: absolute;
-			top: 235px;
-			right: 10px;
-		}
-		
-		#dusty {
-			width: 100%;
-			height: 250px;
-			background-color: gray;
-		}
-		.container {
-			display: flex;
-			padding: 15px;
-			background-color: black;
-		}
-		.left-column{
-			background-color: gray;
-			flex: 1;
-			margin-right: 20px;
-			padding: 5px;
-		}
-		.middle-column {
-			background-color: yellow;
-			flex: 2;
-			padding: 5px;
-		}
-		main {
-			background-color: white;
-		}
-		.right-column {
-			background-color: red;
-			flex:1;
-			margin-left: 20px;
-			padding: 5px;
-		}
-		
-		</style>
+	</style>
 </head>
 <body>
+	<div class="outer-container">
+		<div class ="hero">
+			
+			<nav class="menu">
 
-	<header>
-		<img id="dusty" src="pto.jpg"><form class="innersearch">
-			<input type="text" name="search" placeholder="Search";>
-			<button class="button">Search</button>
-		</form>
-		
-		
-			<nav>
 				<ul>
-					<li><a href="#">Home</li>
-					<li><a href="#">Volunteer</li>
+					<li><a href="#">Home</a></li>
+					<li><a href="signup.blade.php">Volunteer</a></li>
 					<li><a href="#">Fundraisers</a></li>
 					<li><a href="#">Donate</a></li>
 					<li><a href="#">Store</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
-		
-		
-	</header>
-	<div class="container">
-		<aside class="left-column">
+			<div class="photos">
+			<img id="dusty" src="hands.jpg">
+			<img id="pto" src="pto.jpg">
 			
-			<iframe src="https://calendar.google.com/calendar/embed?showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=df7h9c4d76c8f7iv0negnsft7g%40group.calendar.google.com&amp;color=%23cc19c6&amp;ctz=America%2FPhoenix" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="yes"></iframe>></iframe>
+			</div>
 			
-		</aside>
+			
+		</div>
+		
+		<section class="mid-section">
+			<aside class="left-column">
+				@yield('calendar')
+				
+			</aside>
 
-		<section class="middle-column">
+			<div class="middle-column">
+				<div class="pto_text">
+					@yield('middle-top')
+					
+				</div>
+
+				<div>			
+
+					<h1>@yield('title')</h1>
+					<p class="aboutpto">@yield('content')</p>
+
+				</div>	
+			</div>
+			{{-- <div class="right-column">
+				<div>
+					@section('fundraising-links')
+				</div>
+				put in icons with links here across all pages
+				<img src=""<a href="http://www.boxtops4education.com/"></a>
+				scripts
+				amazon
+
+			</div> --}}
+		</section>
+
+		</div>
+
+		<div class="bottom-section">
 			<div>
-				slick carousel
+				
+				<a href="https://concrete.susd.org/">Scottsdale Unified School District</a>
+				<a href="http://scottsdale.nutrislice.com/menu/pueblo">Breafast/Lunch Menu</a>
 			</div>
 
-			<div>			
+				<form class="innersearch">
+					<input type="text" name="search" placeholder="Search";>
+					<button class="button">Search</button>
+				</form>
+		</div>
 
-				<h1>@yield('main-content')</h1>
-				Why Join Pueblo’s PTO?
-
-				Your donation helps the PTO enhance our children’s educational experience and reduce fundraisers.
-
-				Pueblo PTO is a 501(c)3 non-profit organization – your donation is 100% tax deductible. Please drop off cash or check payable to: Pueblo PTO at Pueblo Front Office.
-
-				Schedules are busy for everyone…but being involved in our children’s education is important. Don’t be afraid to sign up to be a volunteer, there are lots of fundraisers and school events throughout the year. The more people we have, the better our community will be which will only benefit OUR children.
-
-				Who Can Join the PTO?
-
-				Parents – padres
-				Teachers- maestros
-				Grandparents – abuelos
-				Aunts – tia’s
-				Uncles – tio’s
-				Neighbors – vecinos
-
-				PTO meetings are typically the first Tuesday of every month at 6:00pm at the library – please check our calendar for specific dates.
-								
-			</div>
-		</section>
-
-		<section class="right-column">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</section>
 	</div>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
-
 </body>
 </html>

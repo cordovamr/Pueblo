@@ -1,0 +1,9 @@
+@if( count($errors) > 0)
+			@if( count($errors->getBags()['default']->get('email')) > 0)
+			<span>
+				{{ $errors->getBags()['default']->get('email')[0]}}
+			</span>
+			@endif
+
+
+The above statement loop can be placed at the top of the form/registration page to catch all errors, or it can be placed in the field of each separate data div, so that that specific error is generated and displayed respective to that line
