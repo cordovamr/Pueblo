@@ -125,9 +125,9 @@
 			<nav class="menu">
 
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="signup.blade.php">Volunteer</a></li>
-					<li><a href="#">Fundraisers</a></li>
+					<li><a href="/home">Home</a></li>
+					<li><a href="/volunteerview">Volunteer</a></li>
+					<li><a href="/fundraisers">Fundraisers</a></li>
 					<li><a href="#">Donate</a></li>
 					<li><a href="#">Store</a></li>
 					<li><a href="#">Contact</a></li>

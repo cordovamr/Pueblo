@@ -1,5 +1,4 @@
-@extends ('Layouts.layout')
-
+@extends ('Layouts/layout')
 @section ('calendar')
 <div class="calendar">
 <h1>Today is {{ date('M d, Y') }}</h1>
@@ -79,36 +78,24 @@
   </table>
 </div>
 @endsection
-
-
-
 @section ('middle-top')
 
-@endsection
-@section('title')
-<span class="why">Why Join Pueblo’s PTO?</span>
-@endsection
+<h1>Who Can Join the PTO?</h1>
 
-@section ('content')
-
-<p>Arizona is ranked 50th for education funding at less than $7,800 a year per student. The national average is over $10,000 per student.
-</p>
-<p>The PTO supplements our childrens' education by providing additional enrichment activities such as the Art Masterpiece program, Spanish resources that are only at our school, Pueblo.
-</p>
-Pueblo PTO is a 501(c)3 non-profit organization – your donation is 100% tax deductible. Please drop off cash or check payable to: Pueblo PTO at Pueblo Front Office.
-
-Schedules are busy for everyone…but being involved in our children’s education is important. Don’t be afraid to sign up to be a volunteer, there are lots of fundraisers and school events throughout the year. The more people we have, the better our community will be which will only benefit OUR children.
-
-Who Can Join the PTO?
-
-Parents – padres
+<p>Parents – padres
 Teachers- maestros
 Grandparents – abuelos
 Aunts – tia’s
 Uncles – tio’s
 Neighbors – vecinos
+</p>
 
-PTO meetings are typically the first Tuesday of every month at 6:00pm at the library – please check our calendar for specific dates.
+<button><a href="/addVolunteer">Signup!</button>
+
+
+
+
+
+
+
 @endsection
-
-				

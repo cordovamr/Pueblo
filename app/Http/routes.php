@@ -20,7 +20,17 @@ Route::get('calendar', function() {
 });
 Route::get('home', 'VolunteerController@index');
 
-Route::get('signup', 'VolunteerController@signup');
+Route::get('volunteerview', function() {
+	return view('volunteerview');
+});
+Route::get('fundraisers', 'VolunteerController@fundraisers');
+
+
+Route::get('addVolunteer', 'VolunteerController@addVolunteer');
+Route::post('addVolunteer', 'VolunteerController@saveVolunteer');
+Route::get('myaccount', function() {
+	return "hello this is your account";
+});
 Route::get('volunteerList', 'VolunteerController@getVolunteers');
 Route::get('volunteerDetails', 'VolunteerController@getVolunteerDetails');
 

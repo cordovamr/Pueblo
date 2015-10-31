@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 
-use App\Http\Requests;
+// use App\Http\Requests;
+use Request;
 use App\Http\Controllers\Controller;
+use App\Models\Volunteer;
 
 class VolunteerController extends Controller 
 {
@@ -18,29 +20,94 @@ class VolunteerController extends Controller
 		// 	header('Location: home');
 		// }
 	}
-	public function signup() {
-		return view('signup');
-	}
-	public function getVolunteers() {
-		echo "almost there";
-	}
 
-	public function getVolunteerDetails() {
-
-		echo "details...yes";
-		// $volunteer = Volunteers::getVolunteersDetails($id) {
-
-		// 	return view('volunteerDetails', ['volunteer'=>$volunteer]);
-		
+	public function fundraisers() { //I might use this function to point to the model that will input new fundraisers or events from the database
+		return view('fundraisers');
 	}
 
 	public function addVolunteer() {
+	
+		return view('addVolunteer');
+	}
 
-		return view("signup");
+ 	public function saveVolunteer(){
+	
+		$volunteer = new Volunteer();
+
+		$volunteerName = Request::input("firstName", "lastName", "email");
+		
+
+		$volunteer->firstName = $volunteerName;
+		$volunteer->lastName = $volunteerName;
+		$volunteer->email = $volunteerName;
+
+		$volunteer->create();
+
+		return redirect('/myaccount');
+	}
+}
+
+// 		// print_r(Request::input("name"));
+// 		$game = new Game();
+
+// 		$gameName = Request::input("name"); //just a different way of obtaining the post & get data
+// 		$gameYear = $_POST['year']; //both this statement and the above statement yield the same
+
+
+// 		$game->title = $gameName; //this is my $game object that will list the title. Can also do it for game->year
+// 		$game->year = $gameYear; //this is my $game object that will list the year. 
+
+// 		$game->create(); //this is the new object $game, being saved by the controller function Save()
+
+// 		//the view is then returned with the full list and the updated new $game object added to the list
+
+// 		return redirect('/games');
+
+// 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 	public function getVolunteers() {
+// 		echo "almost there";
+// 	}
+
+// 	public function getVolunteerDetails() {
+
+// 		// echo "details...yes";
+// 		$volunteer = Volunteer::getVolunteersDetails($id) {
+
+// 			return view('volunteerDetails', ['volunteer'=>$volunteer]);
+// 		}
+// 	}
+
+// 	public function addVolunteer() {
+
+// 		return view("signup");
 
 		
-		 echo "ok";
-	}
+// 		 echo "ok";
+// 	}
 
 	 
 
@@ -113,4 +180,4 @@ class VolunteerController extends Controller
 
 
 	// public function
-}
+
