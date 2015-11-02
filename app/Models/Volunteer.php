@@ -23,7 +23,7 @@ class Volunteer { //extends Model {
 			$volunteer = new Volunteer();
 			$volunteer->id = $row->id;
 			$volunteer->firstName = $row->firstName;
-			$volunteer->firstName = $row->lastName;
+			$volunteer->lastName = $row->lastName;
 			$volunteer->email = $row->email;
 			$volunteers[] = $volunteer;
 		}
@@ -39,7 +39,7 @@ class Volunteer { //extends Model {
 		$volunteer = new Volunteer();
 			$volunteer->id = $row->id;
 			$volunteer->firstName = $row->firstName;
-			$volunteer->firstName = $row->lastName;
+			$volunteer->lastName = $row->lastName;
 			$volunteer->email = $row->email;
 			
 		return $volunteer;

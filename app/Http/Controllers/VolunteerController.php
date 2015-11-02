@@ -34,12 +34,17 @@ class VolunteerController extends Controller
 	
 		$volunteer = new Volunteer();
 
-		$volunteerName = Request::input("firstName", "lastName", "email");
-		
+		$volunteerName = array();
 
-		$volunteer->firstName = $volunteerName;
-		$volunteer->lastName = $volunteerName;
-		$volunteer->email = $volunteerName;
+		$volunteerName[0] = $_POST['firstName'];
+		$volunteerName[1] = $_POST['lastName'];
+		$volunteerName[2] = $_POST['email'];
+
+		
+		// echo "hello" . $volunteerName[0] . $volunteerName[1] . $volunteerName[2];
+		$volunteer->firstName = $volunteerName[0];
+		$volunteer->lastName = $volunteerName[1];
+		$volunteer->email = $volunteerName[2];
 
 		$volunteer->create();
 

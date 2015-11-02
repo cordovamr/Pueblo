@@ -28,6 +28,7 @@ Route::get('fundraisers', 'VolunteerController@fundraisers');
 
 Route::get('addVolunteer', 'VolunteerController@addVolunteer');
 Route::post('addVolunteer', 'VolunteerController@saveVolunteer');
+
 Route::get('myaccount', function() {
 	return "hello this is your account";
 });
