@@ -33,7 +33,6 @@ class Volunteer { //extends Model {
 		DB::update($sql, ["x"=>$this->title, "y"=>$this->year, "z"=>$this->id]);
 	}
 		
-}
 
     public static function getVolunteers() {
     	$sql = "SELECT * from volunteers";
@@ -78,3 +77,4 @@ class Volunteer { //extends Model {
 	    // // Execute the statement
 	    // $statement->execute(["x"=>$gameId]);
 	}
+}

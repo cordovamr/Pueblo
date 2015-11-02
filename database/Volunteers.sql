@@ -23,13 +23,14 @@
 -- insert into volunteers (firstName, lastName, email) value ("April", "Goodman", "missapril11@cox.net");
 	
 
--- create table events (
--- 	eventID int auto_increment primary key,
--- 	title varchar(255) not null,
--- 	eventStart date not null,
--- 	eventEnd date not null,
--- 	description text(255) not null
--- );
+create table events (
+	eventID int auto_increment primary key,
+	title varchar(255) not null,
+	eventStart date not null,
+	eventEnd date not null,
+	description text(255) not null,
+
+);
 
 insert into events (title, eventStart, eventEnd, description, month) values ('Pumpkin Patch', '2015-11-24 16:00:00', '2015-11-24 20:00:00', 'Have Fun', '11');
 insert into events (title, eventStart, eventEnd, description, month) values ('Parent Teacher Conference', '2015-11-14 16:00:00', '2015-11-15 20:00:00', 'Have Fun', '11');

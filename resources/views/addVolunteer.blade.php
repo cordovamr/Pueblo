@@ -14,7 +14,7 @@
 
 	<div>
 	<h1 class"registered">Already registered?</h1>
-		<button class="login" type="submit" name="login" value="login">Login</button>
+	<button class="login" type="submit" name="login" value="login">Login</button>
 	</div>
 </form> 
 @endsection

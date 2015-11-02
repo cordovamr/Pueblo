@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use PDO;
+use App\Models\Event;
+use Request;
 
 class EventController extends Controller {
     
@@ -14,7 +13,7 @@ class EventController extends Controller {
 		$events = Event::getEvents();
 
 		print_r($events);
-		return view('event', ['events'=>$events]);
+		return view('events', ['events'=>$events]);
 	}
     
     public function getEventDetails($id) {

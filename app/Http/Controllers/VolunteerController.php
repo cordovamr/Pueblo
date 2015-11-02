@@ -12,6 +12,8 @@ use App\Models\Volunteer;
 class VolunteerController extends Controller 
 {
 	public function index() {
+
+		
 		return view('home');
 
 	}
@@ -30,26 +32,13 @@ class VolunteerController extends Controller
 		
 	// }
 
-	public function getVolunteers($id) {
-			// echo "almost there";
-			$volunteers = Volunteer::getVolunteers();
-
-			print_r($volunteers);
-			return view('volunteer', ['volunteers'=>$volunteers]);
-		}
-    
-    public function getVolunteerDetails($id) {
-    	$volunteer = Volunteer::getVolunteer($id);
-  
-		return view('volunteerDetails', ['volunteer'=>$volunteer]);
-	}
 
 	public function addVolunteer() {
 	
 		return view('addVolunteer');
 	}
 
- 	public function saveVolunteer(){
+ 	public function saveVolunteer() {
 	
 		$volunteer = new Volunteer();
 
@@ -67,10 +56,23 @@ class VolunteerController extends Controller
 
 		$volunteer->create();
 
-		return redirect('myaccount');
+		return redirect('/myaccount');
 	}
 }
 
+	// public function getVolunteers($id) {
+	// 		// echo "almost there";
+	// 		$volunteers = Volunteer::getVolunteers();
+
+	// 		print_r($volunteers);
+	// 		return view('volunteer', ['volunteers'=>$volunteers]);
+	// 	}
+    
+ //    public function getVolunteerDetails($id) {
+ //    	$volunteer = Volunteer::getVolunteer($id);
+  
+	// 	return view('volunteerDetails', ['volunteer'=>$volunteer]);
+	// }
 	// public function fundraisers() { //I might use this function to point to the model that will input new fundraisers or events from the database
 	// 	return view('fundraisers');
 	// }

@@ -4,10 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="device-width initial-scale=1">
 	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
-	<title>Template for my website pages- Pueblo</title>
-	<style type="text/css">
+
+<title>Template for my website pages- Pueblo</title>
+<style type="text/css">
 		body {
 			background-image: url('books.jpg');
 			background-repeat: no-repeat;
@@ -102,7 +103,7 @@
 			margin: 0px 5px 0px 5px;
 		}
 		.bottom-section {
-			background: linear-gradiend(#5C0DB4, #5EB32E);
+			background: linear-gradient(#5C0DB4, #5EB32E);
 			opacity: .5;
 			text-align: center;
 
@@ -119,6 +120,8 @@
 	</style>
 </head>
 <body>
+
+
 	<div class="outer-container">
 		<div class ="hero">
 			
@@ -134,9 +137,9 @@
 				</ul>
 			</nav>
 			<div class="photos">
-			<img id="dusty" src="hands.jpg">
-			<img id="pto" src="pto.jpg">
-			
+				<img id="dusty" src="hands.jpg">
+				<img id="pto" src="pto.jpg">
+				
 			</div>
 			
 			
@@ -145,80 +148,9 @@
 		<section class="mid-section">
 			<aside class="left-column">
 				@yield('calendar')
-				<div class="calendar">
-<p>Today is {{ date('M d, Y') }}</p>
-<h1>Upcoming Events</h1>
-
-  <table>
-    <thead>
-      <tr>
-        <td class="calendar-title" colspan="7">{{ date('F  Y') }}</td>
-      </tr>
-      <tr>
-        <!-- <td class="button">«</td>
-        <td class="button">‹</td> -->
-        <td class="button" colspan="3">
-        {{-- <p>Today is {{ date('M d, Y') }}</p> --}}
-        </td>
-        <!-- <td class="button">›</td>
-        <td class="button">»</td> I WANT TO DO AN ON.CLICK HERE TO SCROLL THROUGH THE MONTHS-->
-      </tr>
-      <tr>
-        <th class="weekend">S</th>
-        <th>M</th>
-        <th>T</th>
-        <th>W</th>
-        <th>T</th>
-        <th>F</th>
-        <th class="weekend">S</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="days">
-      <?php
-      $month = date ("m");
-      $year = date ("Y");
-      $today = date("d");
-      $endDate = date("t", mktime(0,0,0, $month, $today, $year));
-
-      $s = date ("w", mktime(0,0,0, $month, 1, $year));
-
-      for ($ds = 1; $ds<=$s; $ds++) {
-
-       echo "<td style='font-family:arial;color:#B3D9FF' align=center valign=middle> </td>";}
-      
-        for ($day=1; $day<=$endDate; $day++) {
-          if (date("w", mktime(0,0,0, $month, $day, $year)) == 0) { 
-            echo "<tr>";
-          }
-
-            
-            $sql = "SELECT * from events where month = " . $month;
-            $rows = DB::select($sql);
-
-            foreach($rows as $row) {
-              var_dump($row);
-              // $theStamp = $row['eventStart'];
-              // $event_day = date('d', $theStamp);
-
-              //   if($event_day == $day) {
-              //     echo "lalala";
-                
-              //   } else {
-              //     echo "<td style=\"font-family:arial; color:#333333\" align=centervalign=middle> <span style=\"color:#000\">$day</span></td>";
-              //   }
-
-
-            }          
-                        
-          if(date("w", mktime(0,0,0, $month, $day, $year)) == 6) { echo "</tr>"; }
-          
-      }
-      echo "</table>";?>
-
-
 				
 			</aside>
+<!--This is the mid-container that includes the aside column with calendar, and content box that changes per page-->				
 
 			<div class="middle-column">
 				<div class="pto_text">
@@ -233,7 +165,7 @@
 
 				</div>	
 			</div>
-			{{-- <div class="right-column">
+			<div class="right-column">
 				<div>
 					@section('fundraising-links')
 				</div>
@@ -242,10 +174,10 @@
 				scripts
 				amazon
 
-			</div> --}}
-		</section>
+			</div>
+	</section>
 
-		</div>
+		
 
 		<div class="bottom-section">
 			<div>
@@ -263,6 +195,6 @@
 	</div>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script> 
 </body>
 </html>

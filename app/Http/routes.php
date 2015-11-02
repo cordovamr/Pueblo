@@ -23,7 +23,6 @@ Route::get('home', 'VolunteerController@index');
 Route::get('volunteerview', function() {
 	return view('volunteerview');
 });
-Route::get('fundraisers', 'VolunteerController@fundraisers');
 
 
 Route::get('addVolunteer', 'VolunteerController@addVolunteer');
@@ -35,10 +34,13 @@ Route::get('myaccount', function() {
 Route::get('volunteerList', 'VolunteerController@getVolunteers');
 Route::get('volunteerDetails', 'VolunteerController@getVolunteerDetails');
 
+Route::get('/events', 'EventController@getEvents');
+Route::get('/events/{id}', 'EventController@getEventDetails');
 
-Route::get('login', function() {
-	return view('login');
-});
+// Route::get('login', function() {
+// 	return view('login');
+// });
+// Route::get('fundraisers', 'VolunteerController@fundraisers');
 
 // Route::get('signup', function () {
 // 	return view('signup');
