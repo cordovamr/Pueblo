@@ -13,7 +13,28 @@ class Volunteer { //extends Model {
 	public $lastName;
 	public $email;
 	
+	public function create() {
+
+		
+		$sql = "INSERT into volunteers (firstName, lastName, email) values (:x, :y, :z)";
+		
+		DB::insert($sql, ["x"=>$this->firstName, "y"=>$this->lastName, "z"=>$this->email]);
+
+
+		// echo "ok";
+		
+		
+	}
     
+	public function Update($id) {
+
+		$sql = "UPDATE volunteers SET firstName=:x, lastName=:y WHERE id= :z";
+
+		DB::update($sql, ["x"=>$this->title, "y"=>$this->year, "z"=>$this->id]);
+	}
+		
+}
+
     public static function getVolunteers() {
     	$sql = "SELECT * from volunteers";
 		$rows = DB::select($sql);
@@ -46,18 +67,6 @@ class Volunteer { //extends Model {
 
 	}
 	
-	public function create() {
-
-		
-		$sql = "INSERT into volunteers (firstName, lastName, email) values (:x, :y, :z)";
-		
-		DB::insert($sql, ["x"=>$this->firstName, "y"=>$this->lastName, "z"=>$this->email]);
-
-
-		// echo "ok";
-		
-		
-	}
 	
 	public static function Erase($id)	 {
 		
@@ -69,12 +78,3 @@ class Volunteer { //extends Model {
 	    // // Execute the statement
 	    // $statement->execute(["x"=>$gameId]);
 	}
-
-	public function Update($id) {
-
-		$sql = "UPDATE volunteers SET firstName=:x, lastName=:y WHERE id= :z";
-
-		DB::update($sql, ["x"=>$this->title, "y"=>$this->year, "z"=>$this->id]);
-	}
-		
-}

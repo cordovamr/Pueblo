@@ -14,15 +14,34 @@ class VolunteerController extends Controller
 	public function index() {
 		return view('home');
 
-		// if($LoggedIn) {
-		// 	return view('myaccount');
-		// } else {
-		// 	header('Location: home');
-		// }
 	}
 
-	public function fundraisers() { //I might use this function to point to the model that will input new fundraisers or events from the database
-		return view('fundraisers');
+	// public function LoggedIn() {
+
+	// 	$user = new User() {
+
+	// 	}
+	// 	// if($LoggedIn) {
+	// 	// 	return view('myaccount');
+	// 	// } else {
+	// 	// 	header('Location: home');
+	// 	// }
+
+		
+	// }
+
+	public function getVolunteers($id) {
+			// echo "almost there";
+			$volunteers = Volunteer::getVolunteers();
+
+			print_r($volunteers);
+			return view('volunteer', ['volunteers'=>$volunteers]);
+		}
+    
+    public function getVolunteerDetails($id) {
+    	$volunteer = Volunteer::getVolunteer($id);
+  
+		return view('volunteerDetails', ['volunteer'=>$volunteer]);
 	}
 
 	public function addVolunteer() {
@@ -48,27 +67,13 @@ class VolunteerController extends Controller
 
 		$volunteer->create();
 
-		return redirect('/myaccount');
+		return redirect('myaccount');
 	}
 }
 
-// 		// print_r(Request::input("name"));
-// 		$game = new Game();
-
-// 		$gameName = Request::input("name"); //just a different way of obtaining the post & get data
-// 		$gameYear = $_POST['year']; //both this statement and the above statement yield the same
-
-
-// 		$game->title = $gameName; //this is my $game object that will list the title. Can also do it for game->year
-// 		$game->year = $gameYear; //this is my $game object that will list the year. 
-
-// 		$game->create(); //this is the new object $game, being saved by the controller function Save()
-
-// 		//the view is then returned with the full list and the updated new $game object added to the list
-
-// 		return redirect('/games');
-
-// 	}
+	// public function fundraisers() { //I might use this function to point to the model that will input new fundraisers or events from the database
+	// 	return view('fundraisers');
+	// }
 
 
 
@@ -91,20 +96,6 @@ class VolunteerController extends Controller
 
 
 
-
-
-// 	public function getVolunteers() {
-// 		echo "almost there";
-// 	}
-
-// 	public function getVolunteerDetails() {
-
-// 		// echo "details...yes";
-// 		$volunteer = Volunteer::getVolunteersDetails($id) {
-
-// 			return view('volunteerDetails', ['volunteer'=>$volunteer]);
-// 		}
-// 	}
 
 // 	public function addVolunteer() {
 
