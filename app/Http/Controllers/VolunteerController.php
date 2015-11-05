@@ -65,11 +65,11 @@ class VolunteerController extends Controller {
 			$volunteers = Volunteer::getVolunteers();
 
 			// print_r($volunteers);
-			return view('volunteer', ['volunteers'=>$volunteers]);
+			return view('volunteers', ['volunteers'=>$volunteers]);
 	}
     
     public function getVolunteerDetails($id) {
-    	$volunteer = Volunteer::getVolunteer($id);
+    	$volunteer = Volunteer::getVolunteers($id);
   
 		return view('volunteerDetails', ['volunteer'=>$volunteer]);
 	}

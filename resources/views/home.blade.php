@@ -1,12 +1,33 @@
 @extends ('Layouts.layout')
 
-@section ('calendar')
- 
- <?php echo "calendar by variable from the route/controller/model";?>
+@section ('post-calendar')
+<div class="whys">
+	<div class="why">
+		<img src="cookie.jpg" class="my-events" style="width: 90px; height: 90px; float: left; margin-left: 10px;">
+		<div class="description">
+		<h3>Orders are in!</h3>
+		<p>Pick up your orders tomorrow <br>
+		Or they will be forfeited.
+		</p>
+		</div>
+	</div>
+	<div class="why">
+		<img src="turkey.gif" class="my-events" style="width: 90px; height: 90px; float: left; margin-left: 10px;">
+		<div class="description">
+		<h3>Pumpkin Patch</h3>
+		<p>Don't miss Turkey Luncheon 11/20!</p>
+		</div>
+	</div>
+	<div class="why">
+		<img src="haunthouse.jpeg" class="my-events" style="width: 90px; height: 90px; float: left; margin-left: 10px;">
+		<div class="description">
+		<h3>Pumpkin Patch</h3>
+		<p>The Haunted Halloween House was a blast! Don't miss it next year!</p>
+		</div>
+	</div>
 @endsection
 
 @section ('middle-top')
-
 @endsection
 
 @section('title')
@@ -14,7 +35,6 @@
 @endsection
 
 @section ('content')
-
 <p style="color: white;">No other school offers Spanish immersion like Pueblo! It is the only Spanish immersion program in the Scottsdale Unified School District. Students learn half of their subjects daily in English, and the other half in Spanish. They are introduced to Spanish grammar & syntax. They are exposed to cultural traditions and celebrations from across the world in Spanish-speaking countries.
 <br>
 
@@ -26,17 +46,11 @@ Schedules are busy for everyone…but being involved in our children’s educati
 <br>
 </p>
 
-<h1>Who Can Join the PTO?</h1>
+<h1 class="why">Who Can Join the PTO?</h1>
 
-<p>Parents – padres
-Teachers- maestros
-Grandparents – abuelos
-Aunts – tia’s
-Uncles – tio’s
-Neighbors – vecinos
-</p>
-
-<p>PTO meetings are typically the first Tuesday of every month at 6:00pm at the library – please check our calendar for specific dates.
+<p>Parents, Teachers, Community Members, Teens, and Businesses.</p>
+<p><a class="twitter-timeline" href="https://twitter.com/PuebloSUSD" data-widget-id="662150687912890368">Tweets by @PuebloSUSD</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </p>
 @endsection
 

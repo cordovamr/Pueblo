@@ -53,16 +53,17 @@ class Volunteer {
 	public static function getVolunteer($id) {
 
 		$sql = "SELECT * from volunteers where id = :x";
-		$row = DB::selectOne($sql, ["x"=>$id]);
-		// print_r();
+		$rows = DB::selectOne($sql, ["x"=>$id]);
+		print_r();
+		$volunteer = [];
+		foreach($volunteers as $volunteer) {
 		$volunteer = new Volunteer();
-			$volunteer->id = $row->id;
+			$volunteer->id = $row->$id;
 			$volunteer->firstName = $row->firstName;
 			$volunteer->lastName = $row->lastName;
 			$volunteer->email = $row->email;
-			
+		}
 		return $volunteer;
-
 	}
 	
 	

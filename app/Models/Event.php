@@ -64,9 +64,7 @@ class Event {
 		$event->eventStart = $row->eventStart;
 		$event->eventEnd = $row->eventEnd;
 		$event->description = $row->description;
-
 		}
-		
 		return $event;
 	}
 }

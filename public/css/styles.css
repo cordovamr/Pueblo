@@ -9,31 +9,25 @@ body {
 	margin: 0 auto;
 	box-shadow: 0 0 20px #000;
 }
-
 .hero {
 	border-bottom: solid #663F93 2px;
 	padding-top: 20px;
 	background-color: #34BC00;
-
-
 }
 .photos {
 	display: flex;
 	width: 100%;
 	background-color: #5EB32E;
-
 }
 #dusty {
 	flex: 1;
 	height: 250px;
 	padding: 5px;
-	
 }
  #pto {
 	flex: 2;
 	padding: 5px;
 }
-
 nav {
 	background-color: white;
 	padding: 10px;
@@ -44,8 +38,6 @@ nav ul {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	/*justify-content: space-around;*/
-
 }
 nav li {
 	flex: 1 0 auto;
@@ -55,8 +47,6 @@ nav li a {
 	text-decoration: none;
 	color: #663F93;
 }
-
-
 .mid-section {
 	display: flex;
 	width: 100%;
@@ -67,7 +57,13 @@ nav li a {
 aside {
 	text-align: center;
 	content: center;
-	
+}
+.my-meetups {
+	background-color: red;
+}
+.haunthouse {
+	width: 90px;
+	height: 90px;
 }
 .calendar-title {
 	border-style: solid white 1px;
@@ -80,13 +76,7 @@ aside {
 .middle-column {
 	flex: 3;
 }
-/*a < img {
-	width: 80px;
-	overflow: hidden;
-	margin: 5px 5px 10px 5px;
-}*/
-
-#links {
+#links , .twitter-timeline {
 	width: 140px;
 	overflow: hidden;
 	margin: 5px 5px 10px 5px;
@@ -95,13 +85,11 @@ aside {
 	width: 40px;
 	height: 40px;
 }
-
 .grow {
 	transition: all .2s ease-in-out; 
 }
 .grow:hover { transform: scale(1.5); 
 }
-
 form {
 	background-color: white;
 	color: black;
@@ -125,7 +113,6 @@ form {
 	text-align: center;
 	color: white;
 }
-
 #pp {
 	color: white;
 }

@@ -20,6 +20,9 @@ Route::get('home', 'VolunteerController@index');
 Route::get('login', function() {
 	return view('login');
 });
+Route::get('contact', function() {
+	return view('contact');
+});
 
 Route::get('volunteerview', function() {
 	return view('volunteerview');
