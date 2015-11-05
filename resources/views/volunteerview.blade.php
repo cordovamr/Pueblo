@@ -7,11 +7,11 @@
 <p>Parents – padres
 Teachers- maestros
 Grandparents – abuelos
-Aunts – tia’s
-Uncles – tio’s
+Aunts – tias
+Uncles – tios
 Neighbors – vecinos
 </p>
 
-<button><a href="/addVolunteer">Join Today!</button>
+<button><a href="/addVolunteer">Volunteer Today!</button>
 
 @endsection

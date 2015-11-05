@@ -10,38 +10,41 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+/*Main pages routes: layout, index, home */
 Route::get('welcome', function () {
     return view('/Layouts/welcome', ["date('d,M,Y)"]);
 });
-
-Route::get('calendar', function() {
-	return view('calendarMonth');
-});
+Route::get('index', 'VolunteerController@index');
+Route::get('calendarcode', 'VolunteerController@calendar');
 Route::get('home', 'VolunteerController@index');
+Route::get('login', function() {
+	return view('login');
+});
 
 Route::get('volunteerview', function() {
 	return view('volunteerview');
 });
 
+Route::get('test', 'EventController@makeCalendar');
 
 Route::get('addVolunteer', 'VolunteerController@addVolunteer');
 Route::post('addVolunteer', 'VolunteerController@saveVolunteer');
 
 Route::get('myaccount', function() {
-	return "hello this is your account";
+	return view('myaccount');
 });
-Route::get('volunteerList', 'VolunteerController@getVolunteers');
-Route::get('volunteerDetails', 'VolunteerController@getVolunteerDetails');
+
+Route::get('/volunteers', 'VolunteerController@getVolunteers');
+Route::get('/volunteers/{id}', 'VolunteerController@getVolunteerDetails');
 
 Route::get('/events', 'EventController@getEvents');
-Route::get('/events/{id}', 'EventController@getEventDetails');
+Route::get('/events/{eventID}', 'EventController@getEventDetails');
+
+Route::get('fundraisers', 'VolunteerController@fundraisers');
 
 // Route::get('login', function() {
 // 	return view('login');
 // });
-// Route::get('fundraisers', 'VolunteerController@fundraisers');
-
 // Route::get('signup', function () {
 // 	return view('signup');
 // });

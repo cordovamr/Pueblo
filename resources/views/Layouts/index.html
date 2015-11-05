@@ -3,10 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="device-width initial-scale=1">
-	{{-- <link rel="stylesheet" type="text/css" href="slick/slick.css">
-	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"> --}}
-	
 	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 
 <title>Template for my website pages- Pueblo</title>
 <style type="text/css">
@@ -71,55 +70,31 @@
 		
 		.mid-section {
 			display: flex;
+			
 			width: 100%;
-			background-color: #5C0DB4;
-			opacity: .8;
-			color: white;
+			
 		}
 		aside {
 			text-align: center;
 			content: center;
-			
+			background-color: #5C0DB4;
+			opacity: .75;
 		}
 		.calendar-title {
 			border-style: solid white 1px;
 			border-radius: 50%;
 			color: #34BC00;
+
 		}
 		.left-column{
-			flex: 2;	
+			flex: 2;
+			
 		}
 		.middle-column {
+			background-color: #5C0DB4;
+			opacity: .75;
 			flex: 3;
 		}
-		/*a < img {
-			width: 80px;
-			overflow: hidden;
-			margin: 5px 5px 10px 5px;
-		}*/
-
-		#links {
-			width: 140px;
-			overflow: hidden;
-			margin: 5px 5px 10px 5px;
-		}
-		.grow {
-			transition: all .2s ease-in-out; 
-		}
-		.grow:hover { transform: scale(1.5); 
-		}
-		
-		form {
-			background-color: white;
-			color: black;
-			border-radius: 5px;
-			border-bottom-color: red;
-			border-style: solid #EEE 1px;
-			padding: 10px;
-		}
-		/*form > * + *{
-			padding: 10px;
-		}*/
 		.right-column {
 			flex: 1;
 		}
@@ -130,10 +105,9 @@
 			margin: 0px 5px 0px 5px;
 		}
 		.bottom-section {
-			background-color: #5C0DB4;
+			background: linear-gradient(#5C0DB4, #5EB32E);
 			opacity: .5;
 			text-align: center;
-			color: white;
 
 		}
 		table {
@@ -159,9 +133,9 @@
 					<li><a href="/home">Home</a></li>
 					<li><a href="/volunteerview">Volunteer</a></li>
 					<li><a href="/fundraisers">Fundraisers</a></li>
+					<li><a href="#">Donate</a></li>
 					<li><a href="#">Store</a></li>
 					<li><a href="#">Contact</a></li>
-					<li><a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=TESU0gAHgOmXAMxMz4LEri53B0T-HZg4UhsXO2h5RMgGjQBABjg0efCfQXe&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2">Donate</a></li>
 				</ul>
 			</nav>
 			<div class="photos">
@@ -176,7 +150,7 @@
 		<section class="mid-section">
 			<aside class="left-column">
 				@yield('calendar')
-				<iframe src="https://calendar.google.com/calendar/embed?src=df7h9c4d76c8f7iv0negnsft7g%40group.calendar.google.com&ctz=America/Phoenix" style="border: 0" width="300" height="300" frameborder="0" scrolling="no"></iframe>
+				
 			</aside>
 <!--This is the mid-container that includes the aside column with calendar, and content box that changes per page-->				
 
@@ -196,26 +170,12 @@
 			<div class="right-column">
 				<div>
 					@section('fundraising-links')
-					<div class="imgcontainer" id="grow">
-						<a href="http://www.boxtops4education.com/">
-						<img src="box-tops.jpg" class="grow" id="links">
-						</a>
-						<div class="describe">
-							<b>Box Tops</b><br>
-							Earns $1,200 per year!
-						</div>
-					</div>
-					<div class="imgcontainer">
-						<a href="https://smile.amazon.com/">
-						<img src="amazon.jpg" class="grow" id="links">
-						</a>
-						<div class="describe">
-							<b>Shopping Gives Back</b><br>
-							Earns $1,200 per year!
-						</div>
-					</div>
 				</div>
-
+				put in icons with links here across all pages
+				<img src=""<a href="http://www.boxtops4education.com/">
+				scripts
+				amazon
+				</a>
 			</div>
 	</section>
 
@@ -228,16 +188,15 @@
 				<a href="http://scottsdale.nutrislice.com/menu/pueblo">Breafast/Lunch Menu</a>
 			</div>
 
-				{{-- <form class="innersearch">
+				<form class="innersearch">
 					<input type="text" name="search" placeholder="Search";>
-					<button class="btn btn-primary">Search</button>
-				</form> --}}
+					<button class="button">Search</button>
+				</form>
 		</div>
 
 	</div>
-
-<script src="js/jquery.min.js"></script>
-<script src="slick/slick.min.js"></script> 
-
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script> 
 </body>
 </html>

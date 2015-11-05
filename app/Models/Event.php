@@ -30,25 +30,44 @@ class Event {
 		}
 
 		return $events;
+
+	} 
+	public static function getEventsbyMonth($month) {
+
+		$sql = "SELECT * from events where month(eventStart) = :month";
+		$rows = DB::select($sql, [":month"=>$month]);
+
+		$events = [];
+		foreach($rows as $row) {
+			$event = new Event(); 
+			$event->eventID = $row->eventID;
+			$event->title = $row->title;
+			$event->eventStart = $row->eventStart;
+			$event->eventEnd = $row->eventEnd;
+			$event->description = $row->description;
+			$events[] = $event;
+
+		}
+
+		return $events;
 	}
 
-	// public static function getEventDetails($id) {
+	public static function getEvent($eventID) {
+		$sql = "SELECT * from events where eventID = :x";
+		$rows = DB::select($sql, ["x"=>$eventID]);
 
-	// 	$sql = "SELECT * from events where id = :x";
-	// 	$row = DB::selectOne($sql, ["x"=>$id]);
-	// 	// print_r();
-	// 	$volunteer = new Volunteer();
-	// 		$volunteer->id = $row->id;
-	// 		$volunteer->firstName = $row->firstName;
-	// 		$volunteer->lastName = $row->lastName;
-	// 		$volunteer->email = $row->email;
-			
-	// 	return $volunteer;
+		$event = [];
+		foreach($rows as $row) {
+		$event = new Event(); 
+		$event->eventID = $row->eventID;
+		$event->title = $row->title;
+		$event->eventStart = $row->eventStart;
+		$event->eventEnd = $row->eventEnd;
+		$event->description = $row->description;
 
-	// }
-
-
-
-
+		}
+		
+		return $event;
+	}
 }
 

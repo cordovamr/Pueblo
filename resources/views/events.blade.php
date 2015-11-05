@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Event table</title>
-</head>
-<body>
-<h1>Events</h1>
-
-	<ul>
+@extends ('Layouts.layout')
+@section ('middle-top')
 	@foreach ($events as $event)
 		<li><a href="/events/{{ $event->eventID }}">{{ $event->title }}</a><button data="{{ $event->eventID }}">x</button><a href="/editEvent/{{ $event->eventID }}">edit</a></li>
 	@endforeach
@@ -40,5 +33,4 @@
 
 	</script>
 
-</body>
-</html>						
+@endsection					

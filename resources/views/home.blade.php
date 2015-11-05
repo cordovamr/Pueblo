@@ -1,7 +1,8 @@
 @extends ('Layouts.layout')
 
 @section ('calendar')
-
+ 
+ <?php echo "calendar by variable from the route/controller/model";?>
 @endsection
 
 @section ('middle-top')
@@ -14,13 +15,9 @@
 
 @section ('content')
 
-<p>Arizona is ranked 50th for education funding at less than $7,800 a year per student. The national average is over $10,000 per student.
-<br>
-No other school offers Spanish immersion like Pueblo! It is the only Spanish immersion program in the Scottsdale Unified School District. Students learn half of their subjects daily in English, and the other half in Spanish. They are introduced to Spanish grammar & syntax. They are exposed to cultural traditions and celebrations from across the world in Spanish-speaking countries.
+<p style="color: white;">No other school offers Spanish immersion like Pueblo! It is the only Spanish immersion program in the Scottsdale Unified School District. Students learn half of their subjects daily in English, and the other half in Spanish. They are introduced to Spanish grammar & syntax. They are exposed to cultural traditions and celebrations from across the world in Spanish-speaking countries.
 <br>
 
-Studies show that bilingual students are better multi-taskers, and problem-solvers.
-<br>
 The Pueblo PTO supplements our childrens' education by providing additional enrichment activities such as the Art Masterpiece program, and Spanish resources that are only at our school, Pueblo.
 <br>
 Pueblo PTO is a 501(c)3 non-profit organization – your donation is 100% tax deductible. Please drop off cash or check payable to: Pueblo PTO at Pueblo Front Office.

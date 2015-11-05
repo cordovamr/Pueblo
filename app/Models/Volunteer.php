@@ -5,9 +5,7 @@ namespace App\Models;
 use PDO;
 use DB;
 
-// use Illuminate\Database\Eloquent\Model;
-
-class Volunteer { //extends Model {
+class Volunteer { 
 	public $id;
 	public $firstName;
 	public $lastName;
@@ -26,7 +24,7 @@ class Volunteer { //extends Model {
 		
 	}
     
-	public function Update($id) {
+	public static function Update($id) {
 
 		$sql = "UPDATE volunteers SET firstName=:x, lastName=:y WHERE id= :z";
 
@@ -35,6 +33,7 @@ class Volunteer { //extends Model {
 		
 
     public static function getVolunteers() {
+    	
     	$sql = "SELECT * from volunteers";
 		$rows = DB::select($sql);
 
@@ -77,4 +76,6 @@ class Volunteer { //extends Model {
 	    // // Execute the statement
 	    // $statement->execute(["x"=>$gameId]);
 	}
+
+	
 }

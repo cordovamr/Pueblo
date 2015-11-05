@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Breaking down the Calendar Component</title>
+
+</head>
+<body>
+
+<div class="calendar">
+	<p>Today is {{ date('M d, Y') }}</p>
+	<h1>Upcoming Events</h1>
+
+	<table>
+		<thead>
+		<tr>
+		<td class="calendar-title" colspan="7">{{ date('F  Y') }}</td>
+		</tr>
+		<tr>
+		<td class="button">«</td>
+		<td class="button">‹</td>
+		<td class="button" colspan="3">
+		</td>
+		 <td class="button">›</td>
+		<td class="button">»</td> {{-- I WANT TO DO AN ON.CLICK HERE TO SCROLL THROUGH THE MONTHS --}}
+		</tr>
+		<tr>
+		<th class="weekend">S</th>
+		<th>M</th>
+		<th>T</th>
+		<th>W</th>
+		<th>T</th>
+		<th>F</th>
+		<th class="weekend">S</th>
+		</tr>
+		</thead>
+	<tbody>
+	<tr class="days">
+	
+
+	</div>
+</body>
+</html>
