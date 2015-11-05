@@ -1,0 +1,139 @@
+
+		body {
+			background-image: url('books.jpg');
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+		.outer-container {
+			max-width: 960px;
+			margin: 0 auto;
+			box-shadow: 0 0 20px #000;
+		}
+		
+		.hero {
+			border-bottom: solid #663F93 2px;
+			padding-top: 20px;
+			background-color: #34BC00;
+
+
+		}
+		.photos {
+			display: flex;
+			width: 100%;
+			background-color: #5EB32E;
+
+		}
+		#dusty {
+			flex: 1;
+			height: 250px;
+			padding: 5px;
+			
+		}
+		 #pto {
+			flex: 2;
+			padding: 5px;
+		}
+
+		nav {
+			background-color: white;
+			padding: 10px;
+			border-bottom: solid #663F93 1px;
+		}
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			/*justify-content: space-around;*/
+
+		}
+		nav li {
+			flex: 1 0 auto;
+			text-align: center;
+		}
+		nav li a {
+			text-decoration: none;
+			color: #663F93;
+		}
+
+		
+		.mid-section {
+			display: flex;
+			width: 100%;
+			background-color: #5C0DB4;
+			opacity: .8;
+			color: white;
+		}
+		aside {
+			text-align: center;
+			content: center;
+			
+		}
+		.calendar-title {
+			border-style: solid white 1px;
+			border-radius: 50%;
+			color: #34BC00;
+		}
+		.left-column{
+			flex: 2;	
+		}
+		.middle-column {
+			flex: 3;
+		}
+		/*a < img {
+			width: 80px;
+			overflow: hidden;
+			margin: 5px 5px 10px 5px;
+		}*/
+
+		#links {
+			width: 140px;
+			overflow: hidden;
+			margin: 5px 5px 10px 5px;
+		}
+		#fb {
+			width: 40px;
+			height: 40px;
+		}
+
+		.grow {
+			transition: all .2s ease-in-out; 
+		}
+		.grow:hover { transform: scale(1.5); 
+		}
+		
+		form {
+			background-color: white;
+			color: black;
+			border-radius: 5px;
+			border-bottom-color: red;
+			border-style: solid #EEE 1px;
+			padding: 10px;
+		}
+		/*form > * + *{
+			padding: 10px;
+		}*/
+		.right-column {
+			flex: 1;
+		}
+		.why {
+			color: #34BC00;
+		}
+		.aboutpto {
+			margin: 0px 5px 0px 5px;
+		}
+		.bottom-section {
+			background-color: #5C0DB4;
+			opacity: .5;
+			text-align: center;
+			color: white;
+
+		}
+		table {
+			padding-left: 85px;
+			border: 1px 0px 1px 0px;
+
+		}
+		#pp {
+			color: white;
+		}
